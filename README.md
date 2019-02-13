@@ -1,28 +1,26 @@
 # Ketsuban
-Short description and motivation.
+
+Skip unlucky numbers for ActiveRecord surrogate key.
 
 ## Usage
-How to use my plugin.
-
-## Installation
-Add this line to your application's Gemfile:
 
 ```ruby
-gem 'ketsuban'
+class User < ApplicationRecord
+  include Ketsuban
+end
 ```
 
-And then execute:
-```bash
-$ bundle
+```ruby
+13.times.map { User.create.id }
+# => 1,2,3,5,6,7,8,9,10,11,12,14,15
 ```
 
-Or install it yourself as:
-```bash
-$ gem install ketsuban
-```
+## TODO
 
-## Contributing
-Contribution directions go here.
+- Support other than Postgresql.
+- test
+- Add Unlucky Numbers
 
 ## License
+
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
