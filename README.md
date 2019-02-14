@@ -10,14 +10,26 @@ Skip unlucky numbers for ActiveRecord surrogate key.
 ```ruby
 class User < ApplicationRecord
   include Ketsuban
-  unlucky_numbers [4, 13]
+  unlucky_numbers [4, 5]
 end
+
+5.times.map { User.create.id }
+# => [1, 2, 3, 6, 7]
 ```
 
+or
+
 ```ruby
-13.times.map { User.create.id }
-# => 1,2,3,5,6,7,8,9,10,11,12,14,15
+class User < ApplicationRecord
+  include Ketsuban
+  unlucky_numbers -> next_id { next_id.odd? }
+end
+
+5.times.map { User.create.id }
+# => [2, 4, 6, 8, 10]
 ```
+
+
 
 ## TODO
 

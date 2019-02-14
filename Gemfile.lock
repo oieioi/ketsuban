@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ketsuban (0.1.0)
+    ketsuban (0.2.0)
       rails (~> 5.2.0)
 
 GEM
