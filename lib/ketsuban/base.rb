@@ -4,13 +4,13 @@ module Ketsuban
   extend ActiveSupport::Concern
 
   included do
-    @@unlucky_numbers = [4, 13, 42, 44, 400, 404, 444, 503]
-
     class << self
-      def unlucky_numbers(news = nil)
-        return @@unlucky_numbers if news.nil?
+      @unlucky_numbers = [4, 13, 42, 44, 400, 404, 444, 503]
 
-        @@unlucky_numbers = news.sort
+      def unlucky_numbers(news = nil)
+        return @unlucky_numbers if news.nil?
+
+        @unlucky_numbers = news.sort
       end
 
       alias_method :ketsuban, :unlucky_numbers

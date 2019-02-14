@@ -18,9 +18,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", "~> 5.2.0"
 
-  spec.add_development_dependency "byebug"
   spec.add_development_dependency "database_cleaner"
   spec.add_development_dependency "minitest-around"
+  spec.add_development_dependency "mysql2"
   spec.add_development_dependency "pg"
   spec.add_development_dependency "rubocop"
 end

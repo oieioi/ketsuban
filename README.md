@@ -18,8 +18,7 @@ end
 
 ## TODO
 
-- Support other than Postgresql.
-- test
+- Support sqlite
 
 ## License
 

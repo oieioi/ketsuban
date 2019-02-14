@@ -23,11 +23,29 @@ end
 require 'database_cleaner'
 require 'minitest/around'
 
+def use_mysql
+  config = YAML.load_file(Rails.root.join("config", "database_mysql.yml"))[Rails.env]
+  ActiveRecord::Base.establish_connection(config)
+end
+
+def use_postgresql
+  config = YAML.load_file(Rails.root.join("config", "database.yml"))[Rails.env]
+  ActiveRecord::Base.establish_connection(config)
+end
+
+use_postgresql
+DatabaseCleaner.strategy = :transaction
+DatabaseCleaner.clean_with :truncation
+
+use_mysql
 DatabaseCleaner.strategy = :transaction
 DatabaseCleaner.clean_with :truncation
 
 class Minitest::Spec
   around do |tests|
+    use_postgresql
+    DatabaseCleaner.cleaning(&tests)
+    use_mysql
     DatabaseCleaner.cleaning(&tests)
   end
 end
