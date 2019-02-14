@@ -7,6 +7,7 @@ AllCops:
   Exclude:
     - Gemfile
     - vendor/**/*
+    - test/dummy/bin/*
 
 Style/AsciiComments:
   Enabled: false
