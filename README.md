@@ -1,3 +1,5 @@
+![https://badge.fury.io/rb/ketsuban.svg](https://badge.fury.io/rb/ketsuban.svg)
+
 # Ketsuban
 
 Skip unlucky numbers for ActiveRecord surrogate key.
@@ -19,7 +21,18 @@ end
 ## TODO
 
 - Support sqlite3
-- Support lambda eg `unlucky_numbers -> { |next_id| /^4+$/.match(id.to_s) }`
+- Support lambda eg `unlucky_numbers -> { |next_id| /^4+$/.match(next_id.to_s) }`
+
+## Test
+
+```
+cd test/dummy
+bundle exec rails db:setup
+bundle exec rake db_mysql:setup
+cd ../../
+bundle exec bin/test
+```
+
 
 ## License
 

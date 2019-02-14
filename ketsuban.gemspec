@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary     = "🍀 Skip unlucky numbers for ActiveRecord surrogate key"
   spec.description = "🍀 Skip unlucky numbers for ActiveRecord surrogate key"
   spec.license     = "MIT"
+  spec.required_ruby_version = '~> 2.5'
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 

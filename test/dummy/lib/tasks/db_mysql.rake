@@ -9,6 +9,10 @@ namespace :db_mysql do
     Rake::Task['db:drop'].invoke
   end
 
+  task setup: :set_db_config do
+    Rake::Task['db:setup'].invoke
+  end
+
   task create: :set_db_config do
     Rake::Task['db:create'].invoke
   end
