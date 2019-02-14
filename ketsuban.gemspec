@@ -10,10 +10,10 @@ Gem::Specification.new do |spec|
   spec.authors     = ["oieioi"]
   spec.email       = ["atsuinatsu.samuifuyu@gmail.com"]
   spec.homepage    = "https://github.com/oieioi/ketsuban"
-  spec.summary     = "🍀 Skip unlucky numbers for ActiveRecord surrogate key"
-  spec.description = "🍀 Skip unlucky numbers for ActiveRecord surrogate key"
+  spec.summary     = "Skip unlucky numbers for ActiveRecord surrogate key"
+  spec.description = "Skip unlucky numbers for ActiveRecord surrogate key"
   spec.license     = "MIT"
-  spec.required_ruby_version = '~> 2.4'
+  spec.required_ruby_version = '>= 2.4'
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 

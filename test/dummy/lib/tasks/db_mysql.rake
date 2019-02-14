@@ -9,10 +9,6 @@ namespace :db_mysql do
     Rake::Task['db:drop'].invoke
   end
 
-  task setup: :set_db_config do
-    Rake::Task['db:setup'].invoke
-  end
-
   task create: :set_db_config do
     Rake::Task['db:create'].invoke
   end
@@ -23,13 +19,5 @@ namespace :db_mysql do
 
   task rollback: :set_db_config do
     Rake::Task['db:rollback'].invoke
-  end
-
-  task seed: :set_db_config_paths do
-    Rake::Task['db:seed'].invoke
-  end
-
-  task version: :set_db_config do
-    Rake::Task['db:version'].invoke
   end
 end

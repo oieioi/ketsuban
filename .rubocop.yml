@@ -3,7 +3,7 @@ Rails:
   Enabled: true
 
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.4
   Exclude:
     - Gemfile
     - vendor/**/*

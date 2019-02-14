@@ -40,12 +40,3 @@ DatabaseCleaner.clean_with :truncation
 use_mysql
 DatabaseCleaner.strategy = :transaction
 DatabaseCleaner.clean_with :truncation
-
-class Minitest::Spec
-  around do |tests|
-    use_postgresql
-    DatabaseCleaner.cleaning(&tests)
-    use_mysql
-    DatabaseCleaner.cleaning(&tests)
-  end
-end
