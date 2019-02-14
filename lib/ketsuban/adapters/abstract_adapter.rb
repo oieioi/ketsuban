@@ -6,11 +6,7 @@ module Ketsuban
       end
 
       def fetch_next_id
-        maximum_id&.next || 1
-      end
-
-      def maximum_id
-        @model_class.maximum(@model_class.primary_key)
+        @model_class.maximum(@model_class.primary_key)&.next || 1
       end
 
       def generate_next_id(now_id)

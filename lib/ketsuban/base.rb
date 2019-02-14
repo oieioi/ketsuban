@@ -1,19 +1,32 @@
 require_relative './adapter'
+require_relative './utils'
 
 module Ketsuban
   extend ActiveSupport::Concern
 
+  module ClassMethod
+    @unlucky_numbers = []
+
+    def unlucky_numbers(news = nil)
+      return @unlucky_numbers if news.nil?
+
+      self.unlucky_numbers = news
+    end
+
+    def unlucky_numbers=(news)
+      case news.class.to_s
+      when 'Array' then @unlucky_numbers = news.sort
+      when 'Proc' then @unlucky_numbers = Ketsuban::Utils.includenize!(news)
+      else raise "Not support #{news.class} for ketsuban args"
+      end
+    end
+
+    alias ketsuban unlucky_numbers
+  end
+
   included do
     class << self
-      @unlucky_numbers = [4, 13, 42, 44, 400, 404, 444, 503]
-
-      def unlucky_numbers(news = nil)
-        return @unlucky_numbers if news.nil?
-
-        @unlucky_numbers = news.sort
-      end
-
-      alias_method :ketsuban, :unlucky_numbers
+      include ClassMethod
     end
 
     before_create do
