@@ -18,7 +18,8 @@ end
 
 ## TODO
 
-- Support sqlite
+- Support sqlite3
+- Support lambda `unlucky_numbers -> { |next_id| /^4+$/.match(id.to_s) }
 
 ## License
 
