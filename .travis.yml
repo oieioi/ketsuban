@@ -10,8 +10,8 @@ rvm:
   - 2.5
 
 before_script:
-  - test/dummy/bin/rails db:setup
-  - test/dummy/bin/rake db_mysql:setup
+  - test/dummy/bin/rails db:create
+  - test/dummy/bin/rake db_mysql:create
 
 script:
   - bin/test
