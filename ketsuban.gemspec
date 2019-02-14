@@ -1,4 +1,4 @@
-$:.push File.expand_path("lib", __dir__)
+$LOAD_PATH.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
 require "ketsuban/version"
@@ -18,5 +18,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", "~> 5.2.0"
 
-  #spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "rubocop"
 end

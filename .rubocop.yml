@@ -1,0 +1,31 @@
+# see http://rubocop.readthedocs.io/
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - Gemfile
+    - vendor/**/*
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ClassVars:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 130
+

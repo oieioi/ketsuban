@@ -16,12 +16,13 @@ module Ketsuban
       def generate_next_id(now_id)
         loop do
           break unless @model_class.unlucky_numbers.include?(now_id)
-          now_id = now_id + 1
+
+          now_id += 1
         end
         now_id
       end
 
-      def increment_sequence(now_id)
+      def increment_sequence(_now_id)
         raise 'Not implemented yet!'
       end
     end
