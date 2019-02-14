@@ -1,0 +1,20 @@
+language: ruby
+
+cache: bundler
+
+services:
+  - postgresql
+  - mysql
+
+rvm:
+  - 2.5
+
+before_script:
+  - cd test/dummy
+  - bin/rake db:create
+  - bin/rake db_mysql:create
+  - bin/rake db_mysql:migrate
+
+script:
+  - cd ../../
+  - bin/test
