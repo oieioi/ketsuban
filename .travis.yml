@@ -10,8 +10,10 @@ rvm:
   - 2.5
 
 before_script:
-  - cd test/dummy && bin/rake db:create
-  - cd test/dummy && bin/rake db_mysql:create
+  - cd test/dummy
+  - bin/rake db:create
+  - bin/rake db_mysql:create
 
 script:
+  - cd ../../
   - bin/test
