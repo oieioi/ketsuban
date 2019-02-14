@@ -6,11 +6,17 @@ module Ketsuban
   included do
     @@unlucky_numbers = [4, 13, 42, 44, 400, 404, 444, 503]
 
-    def self.unlucky_numbers(news = nil)
-      return @@unlucky_numbers if news.nil?
+    class << self
 
-      @@unlucky_numbers = news.sort
+      def unlucky_numbers(news = nil)
+        return @@unlucky_numbers if news.nil?
+
+        @@unlucky_numbers = news.sort
+      end
+
+      alias :ketsuban :unlucky_numbers
     end
+
 
     before_create do
       adapter = Adapter.get_adapter(self.class)
