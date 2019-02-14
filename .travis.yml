@@ -1,5 +1,7 @@
 language: ruby
 
+cache: bundler
+
 services:
   - postgresql
   - mysql
@@ -8,7 +10,7 @@ rvm:
   - 2.5
 
 before_script:
-  - test/dummy/bin/rake db:setup
+  - test/dummy/bin/rails db:setup
   - test/dummy/bin/rake db_mysql:setup
 
 script:
