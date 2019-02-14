@@ -15,7 +15,7 @@ module Ketsuban
 
       def generate_next_id(now_id)
         loop do
-          break unless Ketsuban::UNLUCKY_NUMBERS.include?(now_id)
+          break unless @model_class.unlucky_numbers.include?(now_id)
           now_id = now_id + 1
         end
         now_id

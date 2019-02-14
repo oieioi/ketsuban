@@ -7,6 +7,7 @@ Skip unlucky numbers for ActiveRecord surrogate key.
 ```ruby
 class User < ApplicationRecord
   include Ketsuban
+  unlucky_numbers [4, 13]
 end
 ```
 
@@ -19,7 +20,6 @@ end
 
 - Support other than Postgresql.
 - test
-- Add Unlucky Numbers
 
 ## License
 
