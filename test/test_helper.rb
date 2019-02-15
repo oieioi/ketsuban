@@ -34,9 +34,9 @@ def use_postgresql
 end
 
 use_postgresql
-DatabaseCleaner.strategy = :transaction
+DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean_with :truncation
 
 use_mysql
-DatabaseCleaner.strategy = :transaction
+DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean_with :truncation
