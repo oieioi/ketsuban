@@ -6,7 +6,7 @@ module Ketsuban
       end
 
       def fetch_next_id
-        @model_class.maximum(@model_class.primary_key)&.next || 1
+        raise 'Not implemented yet!'
       end
 
       def generate_next_id(now_id)
