@@ -7,6 +7,12 @@ Skip unlucky numbers for ActiveRecord surrogate key.
 
 ## Usage
 
+Gemfile:
+
+```ruby
+gem 'ketsuban'
+```
+
 ```ruby
 class User < ApplicationRecord
   include Ketsuban
