@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "mysql2"
   spec.add_development_dependency "pg"
   spec.add_development_dependency "rubocop"
+  spec.add_development_dependency "sqlite3", '~> 1.3.6'
 end
