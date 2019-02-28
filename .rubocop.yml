@@ -8,6 +8,7 @@ AllCops:
     - Gemfile
     - vendor/**/*
     - test/dummy/bin/*
+    - test/dummy/db/schema*.rb
 
 Style/AsciiComments:
   Enabled: false

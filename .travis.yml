@@ -20,4 +20,5 @@ before_script:
 
 script:
   - cd ../../
+  - rubocop
   - bin/test
