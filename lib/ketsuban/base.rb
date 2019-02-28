@@ -1,6 +1,5 @@
 require_relative './adapter'
 require_relative './class_methods'
-require_relative './utils'
 
 module Ketsuban
   extend ActiveSupport::Concern

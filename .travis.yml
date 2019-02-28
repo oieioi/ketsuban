@@ -17,8 +17,9 @@ before_script:
   - bin/rake db_mysql:migrate
   - bin/rake db_sqlite:create
   - bin/rake db_sqlite:migrate
+  - cd ../../
+  - gem install rubocop
 
 script:
-  - cd ../../
   - rubocop
   - bin/test
