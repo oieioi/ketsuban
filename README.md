@@ -1,5 +1,6 @@
 [![https://badge.fury.io/rb/ketsuban.svg](https://badge.fury.io/rb/ketsuban.svg)](https://rubygems.org/gems/ketsuban)
 [![Build Status](https://travis-ci.org/oieioi/ketsuban.svg?branch=master)](https://travis-ci.org/oieioi/ketsuban)
+[![Coverage Status](https://coveralls.io/repos/github/oieioi/ketsuban/badge.svg?branch=master)](https://coveralls.io/github/oieioi/ketsuban?branch=master)
 
 # ketsuban
 
