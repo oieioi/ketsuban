@@ -19,7 +19,7 @@ Some Model:
 ```ruby
 class User < ApplicationRecord
   include Ketsuban
-  unlucky_numbers [4, 5]
+  unlucky_numbers [4, 5]  
 end
 
 5.times.map { User.create.id }
@@ -37,6 +37,8 @@ end
 5.times.map { User.create.id }
 # => [2, 4, 6, 8, 10]
 ```
+
+`unlucky_numbers` is aliased `ketsuban`
 
 ## License
 
